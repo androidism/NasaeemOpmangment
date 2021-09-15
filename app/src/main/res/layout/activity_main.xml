@@ -20,14 +20,15 @@
         app:srcCompat="@drawable/logon0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/usertxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_stat_name"
         android:ems="10"
-        android:hint="Username"
+        android:hint="@string/UsertxtName"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:text="@string/txtusername"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -36,7 +37,7 @@
         app:layout_constraintVertical_bias="0.563" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/passtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_stat_lock"
@@ -44,6 +45,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:text="@string/passtxtname1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -56,7 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#BA4444"
-        android:text="Login"
+        android:onClick="click1"
+        android:text="@string/logtxtname"
         android:textColor="#CCFF90"
         android:textColorHighlight="#EC1818"
         android:textColorHint="#600C0C"
