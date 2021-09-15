@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "230273273436",
+    "project_id": "operations-management-4a86d",
+    "storage_bucket": "operations-management-4a86d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230273273436:android:242eebf3a3bceec472a099",
+        "android_client_info": {
+          "package_name": "org.ismail.nasaeemopmangment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230273273436-e466u1rblmntss3ib7q7kkd0ok1op90k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxYC1K_RCn_ctYZScRjgZL3Je41GPVL8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230273273436-e466u1rblmntss3ib7q7kkd0ok1op90k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
