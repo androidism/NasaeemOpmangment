@@ -58,7 +58,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#BA4444"
-        android:onClick="click1"
         android:text="@string/logtxtname"
         android:textColor="#CCFF90"
         android:textColorHighlight="#EC1818"
