@@ -6,4 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="388dp"
+            android:layout_height="match_parent"
+            android:background="#8EDA91">
+
+            <TextView
+                android:id="@+id/editTextNumber"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:text="@string/series" />
+
+            <TextView
+                android:id="@+id/id1"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:text="@string/Section"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/id3"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/name"
+                android:textColor="#000000"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:text="@string/Staff" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName2"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:text="@string/Location" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName3"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="97dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:text="@string/monitoring_team" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName4"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="48dp"
+                android:text="@string/drivers_name" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName5"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@string/Safety_Security" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName6"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@string/Administration" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName7"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@string/comments" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,16 @@
     <string name="UsertxtName">UserName</string>
     <string name="txtusername" />
     <string name="passtxtname1" />
+    <string name="series">تسلسل</string>
+    <string name="Section">القسم</string>
+    <string name="name">الاسم</string>
+    <string name="Staff">فريق العمل</string>
+    <string name="Location">الموقع</string>
+    <string name="monitoring_team">فريق المراقبة</string>
+    <string name="drivers_name">اسم السائق</string>
+    <string name="Safety_Security">الأمن والسلامة</string>
+    <string name="Administration">الإدارة</string>
+    <string name="comments">تعليقات</string>
+
+
 </resources>
