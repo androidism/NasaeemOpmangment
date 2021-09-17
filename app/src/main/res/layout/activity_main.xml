@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFD1B7"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <ImageView
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:background="#BA4444"
         android:text="@string/logtxtname"
-        android:textColor="#CCFF90"
+        android:textColor="#FFFFFF"
         android:textColorHighlight="#EC1818"
         android:textColorHint="#600C0C"
         android:textColorLink="#A7ACA1"
