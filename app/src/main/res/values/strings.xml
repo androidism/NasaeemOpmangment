@@ -5,7 +5,7 @@
     <string name="logtxtname">Login</string>
     <string name="UsertxtName">UserName</string>
     <string name="txtusername" />
-    <string name="passtxtname1" />
+    <string name="passtxtname1">1</string>
     <string name="series">تسلسل</string>
     <string name="Section">القسم</string>
     <string name="name">الاسم</string>
@@ -16,6 +16,22 @@
     <string name="Safety_Security">الأمن والسلامة</string>
     <string name="Administration">الإدارة</string>
     <string name="comments">تعليقات</string>
+    <string-array name="Sections">اختر
+        <item>WFP</item>
+        <item>التعليم</item>
+        <item>الحماية</item>
+        <item>التغذية</item>
+        <item>المراقبة</item>
+        <item>الأمن والسلام</item>
+        <item>اللوجستي</item>
+        <item>المالي</item>
+        <item>الموارد البشرية</item>
+        <item>المساءلة</item>
+        <item>الإعلامي</item>
+        <item>المعلومات</item>
+        <item>الإدارة</item>
+
+    </string-array>
 
 
 </resources>
