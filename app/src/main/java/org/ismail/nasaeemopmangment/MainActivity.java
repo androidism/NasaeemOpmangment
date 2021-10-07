@@ -19,16 +19,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 
 
 public class MainActivity extends AppCompatActivity {
 
         EditText usertxt1, passtxt1;
         Button btnlog1;
-    //    DatabaseReference databaseReference;
+        DatabaseReference databaseReference;
         FirebaseAuth firebaseAuth;
         FirebaseUser firebaseUser;
-    String tag = "AnonymousAuth";
+        String tag = "AnonymousAuth";
 
 
 
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                             } else
                                 {
                                 Toast.makeText(MainActivity.this, "Failed Logged", Toast.LENGTH_SHORT).show();
+
                                 }
                             //      if(task.isSuccessful()){
                             //   Log.d(tag,"Completed");
@@ -125,3 +129,47 @@ public class MainActivity extends AppCompatActivity {
 }
 
  */
+    /*
+public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+    if (dataSnapshot.child(parentDbName).child(phone).exists()){
+
+        Users usersData = dataSnapshot.child(parentDbName).child(phone).getValue(Users.class);
+        if (usersData.getPhone().equals(phone))
+        {
+            if (usersData.getPassword().equals(password))
+            {
+                if(parentDbName.equals("Admins"))
+                {
+                    Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+                    loadingBar.dismiss();
+
+                    Intent intent = new Intent(LoginActivity.this, com.dhruva.shopping.AdminCategoryActivity.class);
+                    startActivity(intent);
+                }
+                else if (parentDbName.equals("Users")){
+                    Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
+                    loadingBar.dismiss();
+
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    Prevalent.currentOnlineUser = usersData;
+                    startActivity(intent);
+                }
+
+            }
+            else {
+                loadingBar.dismiss();
+                Toast.makeText(LoginActivity.this,"Password is incorrect",Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+    else {
+        Toast.makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
+        loadingBar.dismiss();
+    }
+}
+
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
+
+    }
+    */
