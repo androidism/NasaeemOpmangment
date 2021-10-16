@@ -1,4 +1,9 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    toastyVersion = '1.5.2'
+    toastyVersion1 = toastyVersion
+    sourceCompatibility = toastyVersion
+    targetCompatibility = toastyVersion1
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
         google()
