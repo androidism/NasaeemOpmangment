@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "230273273436",
-    "firebase_url": "https://operations-management-4a86d-default-rtdb.firebaseio.com",
-    "project_id": "operations-management-4a86d",
-    "storage_bucket": "operations-management-4a86d.appspot.com"
+    "project_number": "5156679058",
+    "project_id": "mangpro-9b681",
+    "storage_bucket": "mangpro-9b681.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:230273273436:android:242eebf3a3bceec472a099",
+        "mobilesdk_app_id": "1:5156679058:android:b261b4383a930bac1be54b",
         "android_client_info": {
           "package_name": "org.ismail.nasaeemopmangment"
         }
       },
       "oauth_client": [
         {
-          "client_id": "230273273436-e466u1rblmntss3ib7q7kkd0ok1op90k.apps.googleusercontent.com",
+          "client_id": "5156679058-3blfithpk2c6ol82po7nsmmu6s5ttukm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBxYC1K_RCn_ctYZScRjgZL3Je41GPVL8o"
+          "current_key": "AIzaSyCLLbzp-jI1KHrHl2BJYOj0k9mmRgNGU8I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "230273273436-e466u1rblmntss3ib7q7kkd0ok1op90k.apps.googleusercontent.com",
+              "client_id": "5156679058-3blfithpk2c6ol82po7nsmmu6s5ttukm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
