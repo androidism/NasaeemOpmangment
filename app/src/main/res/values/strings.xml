@@ -17,6 +17,8 @@
     <string name="Administration">الإدارة</string>
     <string name="comments">تعليقات</string>
     <string name="num">1</string>
+    <string name="addtask">إضافة مهمة</string>
+    <string name="edittask">تعديل المهمة</string>
     <string-array name="Sections">اختر
         <item>WFP</item>
         <item>التعليم</item>
