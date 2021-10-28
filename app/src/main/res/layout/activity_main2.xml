@@ -39,19 +39,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="#FFFFFF"
-        android:src="@drawable/ic_cansl_foreground"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="100dp"
+        android:background="#FFEEEE"
+        android:backgroundTint="#36767C"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_edit2_foreground"
         app:fabSize="normal"
         app:iconPadding="15dp"
         app:iconSize="65dp"
-        app:iconTint="#36767C"
-        app:layout_constraintBottom_toTopOf="@id/fab"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/fab"
         app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/app_name"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:rippleColor="#FFFFFF"
+        tools:ignore="SpeakableTextPresentCheck">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+
+        android:id="@+id/alarm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="261dp"
+        android:background="#FFEEEE"
+        android:backgroundTint="#36767C"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_edit_foreground"
+        app:fabSize="normal"
+        app:iconPadding="15dp"
+        app:iconSize="65dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fab"
+        app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#FFFFFF"
+        tools:ignore="SpeakableTextPresentCheck">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
