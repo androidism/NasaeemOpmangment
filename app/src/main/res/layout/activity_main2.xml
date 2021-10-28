@@ -7,6 +7,7 @@
     tools:context=".MainActivity2">
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -131,6 +132,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp" />
+
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
@@ -214,10 +219,8 @@
 
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="33dp" />
             </TableLayout>
+
         </LinearLayout>
     </HorizontalScrollView>
 
