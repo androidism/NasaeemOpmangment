@@ -16,6 +16,7 @@
     <string name="Safety_Security">الأمن والسلامة</string>
     <string name="Administration">الإدارة</string>
     <string name="comments">تعليقات</string>
+    <string name="num">1</string>
     <string-array name="Sections">اختر
         <item>WFP</item>
         <item>التعليم</item>
