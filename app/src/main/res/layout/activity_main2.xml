@@ -34,7 +34,6 @@
     </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -300,13 +299,19 @@
                         android:inputType="textPersonName"
                         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
 
                     <Switch
                         android:id="@+id/switch2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="الموافقة"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName13"
