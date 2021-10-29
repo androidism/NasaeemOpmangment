@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Add_Task">
 
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -15,6 +17,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="75dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar2"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title="@string/addtask" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="79dp"
+                    android:layout_height="46dp"
+                    app:srcCompat="@drawable/ic_baseline_send_24" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <TableLayout
             android:layout_width="match_parent"
@@ -31,13 +79,13 @@
                 android:minHeight="48dp"
                 android:text="@string/Section"
                 android:textColor="#000000" />
+
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/Sections"
                 tools:ignore="TouchTargetSizeCheck" />
-
 
 
             <TextView
@@ -50,6 +98,7 @@
                 android:text="@string/name"
                 android:textColor="#000000"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
             <EditText
                 android:id="@+id/editTextTextPersonName8"
                 android:layout_width="wrap_content"
@@ -84,6 +133,7 @@
                 android:ems="10"
                 android:minHeight="48dp"
                 android:text="@string/Location" />
+
             <EditText
                 android:id="@+id/editTextTextPersonName10"
                 android:layout_width="wrap_content"
@@ -91,7 +141,6 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
 
 
         </TableLayout>

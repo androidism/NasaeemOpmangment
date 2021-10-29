@@ -1,5 +1,6 @@
 package org.ismail.nasaeemopmangment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         ta_add = findViewById(R.id.ta_add);
         ta_edit = findViewById(R.id.ta_edit);
+
 
 
         ta_add.setVisibility(View.GONE);
@@ -72,7 +74,10 @@ public class MainActivity2 extends AppCompatActivity {
                 add_task.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(MainActivity2.this,"ضيف المهمة من بعد إذنك",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity2.this, Add_Task.class);
+                        startActivity(intent);
+
+                        Toast.makeText(MainActivity2.this,"ضيف المهمة من بعد إذنك ولاتترك بنود فاضي",Toast.LENGTH_SHORT).show();
                     }
                 });
                 edit_task.setOnClickListener(new View.OnClickListener() {

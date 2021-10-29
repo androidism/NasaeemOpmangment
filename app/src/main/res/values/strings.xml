@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">إدارة العمليات</string>
+    <string name="app_name" translatable="false">إدارة العمليات</string>
     <string name="usertxtname">UserName</string>
     <string name="passtxtname">Password</string>
     <string name="logtxtname">Login</string>
@@ -18,6 +18,8 @@
     <string name="comments">تعليقات</string>
     <string name="num">1</string>
     <string name="addtask">إضافة مهمة</string>
+
+
     <string name="edittask">تعديل المهمة</string>
     <string name="Abrov">الموافقة</string>
     <string-array name="Sections">اختر
