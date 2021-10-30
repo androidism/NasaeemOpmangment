@@ -39,12 +39,12 @@
                     android:backgroundTint="#CCDFD7"
                     android:rotation="181"
                     android:tint="#00FFFFFF"
-                    app:srcCompat="@drawable/ic_back2_foreground"
+                    app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar2"
-                    android:layout_width="276dp"
+                    android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:background="?attr/colorPrimary"
                     android:minHeight="?attr/actionBarSize"
@@ -66,6 +66,8 @@
                     app:srcCompat="@drawable/ic_baseline_send_24"
                     tools:ignore="SpeakableTextPresentCheck" />
 
+
+
             </LinearLayout>
 
 
@@ -75,12 +77,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="#FFFFFF" />
+
             <TextView
                 android:id="@+id/id1"
                 style="@style/Widget.AppCompat.TextView.SpinnerItem"
 
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:fontFamily="sans-serif"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
@@ -90,7 +99,7 @@
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:entries="@array/Sections"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -100,7 +109,7 @@
                 style="@style/Widget.AppCompat.TextView.SpinnerItem"
 
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:minHeight="48dp"
                 android:text="@string/name"
                 android:textColor="#000000"
@@ -109,16 +118,37 @@
             <EditText
                 android:id="@+id/editTextTextPersonName8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            <TextView
+                android:id="@+id/id4"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:fontFamily="sans-serif"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:text="@string/target"
+                android:textColor="#000000"  />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName14"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
 
             <TextView
                 android:id="@+id/editTextTextPersonName"
                 style="@style/Widget.AppCompat.TextView.SpinnerItem"
                 android:layout_width="70dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:ems="10"
                 android:minHeight="48dp"
                 android:text="@string/Staff" />
@@ -126,7 +156,7 @@
             <EditText
                 android:id="@+id/editTextTextPersonName9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -136,7 +166,7 @@
                 android:id="@+id/editTextTextPersonName2"
                 style="@style/Widget.AppCompat.TextView.SpinnerItem"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:ems="10"
                 android:minHeight="48dp"
                 android:text="@string/Location" />
@@ -144,12 +174,13 @@
             <EditText
                 android:id="@+id/editTextTextPersonName10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
         </TableLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

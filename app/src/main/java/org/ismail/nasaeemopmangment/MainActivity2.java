@@ -77,7 +77,7 @@ public class MainActivity2 extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity2.this, Add_Task.class);
                         startActivity(intent);
 
-                        Toast.makeText(MainActivity2.this,"ضيف المهمة من بعد إذنك ولاتترك بنود فاضي",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity2.this,"ضيف المهمة من بعد إذنك",Toast.LENGTH_SHORT).show();
                     }
                 });
                 edit_task.setOnClickListener(new View.OnClickListener() {
