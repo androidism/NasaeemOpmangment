@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00FFFFFF"
     tools:context=".Add_Task">
 
 
@@ -30,19 +31,20 @@
                 android:layout_height="69dp"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="75dp"
-                    android:layout_height="56dp"
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fl_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#00FFFFFF"
-                    android:rotation="180"
-                    app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+                    android:backgroundTint="#CCDFD7"
+                    android:rotation="181"
+                    android:tint="#00FFFFFF"
+                    app:srcCompat="@drawable/ic_back2_foreground"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar2"
-                    android:layout_width="256dp"
+                    android:layout_width="276dp"
                     android:layout_height="wrap_content"
                     android:background="?attr/colorPrimary"
                     android:minHeight="?attr/actionBarSize"
@@ -53,11 +55,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:title="@string/addtask" />
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="79dp"
-                    android:layout_height="46dp"
-                    app:srcCompat="@drawable/ic_baseline_send_24" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CCDFD7"
+                    android:tint="#00FFFFFF"
+                    app:backgroundTint="#4C5052"
+                    app:srcCompat="@drawable/ic_baseline_send_24"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout>
 

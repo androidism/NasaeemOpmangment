@@ -3,14 +3,15 @@ package org.ismail.nasaeemopmangment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Add_Task extends AppCompatActivity {
-    ImageButton imageButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+public class Add_Task extends AppCompatActivity {
+
+    FloatingActionButton fl_back;
 
 
     @Override
@@ -19,15 +20,15 @@ public class Add_Task extends AppCompatActivity {
         setContentView(R.layout.activity_add_task);
         getSupportActionBar().hide();
 
-        imageButton=findViewById(R.id.imageButton);
+        fl_back=findViewById(R.id.fl_back);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        fl_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Add_Task.this, MainActivity2.class);
                 startActivity(intent);
 
-                Toast.makeText(Add_Task.this,"ضيف المهمة من بعد إذنك ولاتترك بنود فاضي",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Add_Task.this,"شكراً لأنك ماضفت مهمة",Toast.LENGTH_SHORT).show();
             }
         });
 
