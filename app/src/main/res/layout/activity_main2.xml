@@ -90,7 +90,8 @@
         android:backgroundTint="#36767C"
 
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_edit_foreground"
+        android:src="@drawable/ic_baseline_send_24"
+        android:tint="#00FFFFFF"
         app:fabSize="normal"
         app:iconPadding="15dp"
         app:iconSize="65dp"
@@ -101,8 +102,7 @@
         app:layout_constraintStart_toStartOf="@id/fab"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#FFFFFF"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:tint="@android:color/white">
+        tools:ignore="SpeakableTextPresentCheck">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
@@ -154,32 +154,35 @@
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
                         android:layout_width="62dp"
                         android:layout_height="30dp"
-                        android:textAlignment="center"
                         android:background="@drawable/frame"
                         android:ems="10"
                         android:minHeight="48dp"
-                        android:text="@string/series" />
+                        android:text="@string/series"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/id1"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-                        android:background="@drawable/frame"
                         android:layout_width="wrap_content"
-                        android:textAlignment="center"
                         android:layout_height="30dp"
+                        android:background="@drawable/frame"
                         android:breakStrategy="high_quality"
                         android:fontFamily="sans-serif"
                         android:freezesText="false"
                         android:minWidth="48dp"
                         android:minHeight="48dp"
                         android:text="@string/Section"
-                        android:textColor="#000000" />
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/id3"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
                         android:background="@drawable/frame"
                         android:textAlignment="center"
+                        android:textSize="18sp"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:minHeight="48dp"
@@ -196,6 +199,7 @@
                         android:background="@drawable/frame"
                         android:layout_height="30dp"
                         android:minHeight="48dp"
+                        android:textSize="18sp"
                         android:text="@string/target"
                         android:textColor="#000000"
                         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -208,6 +212,7 @@
                         android:layout_width="70dp"
                         android:layout_height="30dp"
                         android:ems="10"
+                        android:textSize="18sp"
                         android:minHeight="48dp"
                         android:text="@string/Staff" />
 
@@ -218,6 +223,7 @@
                         android:background="@drawable/frame"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
+                        android:textSize="18sp"
                         android:ems="10"
                         android:minHeight="48dp"
                         android:text="@string/Location" />
@@ -230,6 +236,7 @@
                         android:layout_width="97dp"
                         android:layout_height="30dp"
                         android:ems="10"
+                        android:textSize="18sp"
                         android:minHeight="48dp"
                         android:text="@string/monitoring_team" />
 
@@ -241,6 +248,7 @@
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:ems="10"
+                        android:textSize="18sp"
                         android:minHeight="48dp"
                         android:text="@string/drivers_name" />
 
@@ -252,6 +260,7 @@
                         android:background="@drawable/frame"
                         android:ems="10"
                         android:text="@string/Safety_Security"
+                        android:textSize="18sp"
                         android:textAlignment="center" />
 
                     <TextView
@@ -262,6 +271,7 @@
                         android:background="@drawable/frame"
                         android:ems="10"
                         android:text="@string/Administration"
+                        android:textSize="18sp"
                         android:textAlignment="center" />
 
                     <TextView
@@ -272,7 +282,8 @@
                         android:background="@drawable/frame"
                         android:ems="10"
                         android:text="@string/comments"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
 
                 </TableRow>
 
@@ -281,66 +292,561 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textAlignment="center"
-                    android:textDirection="firstStrongRtl">
+                    android:textDirection="firstStrongRtl"
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                    >
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/num1"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="185dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Sections"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:textAlignment="center"
+                        android:background="@drawable/frame"
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                    <EditText
+                        android:id="@+id/editTextTextPersonName9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                    <EditText
+                        android:id="@+id/editTextTextPersonName12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName15"
+                        android:layout_width="406dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName11"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
                         android:ems="10"
                         android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName10"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
                         android:ems="10"
                         android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <Switch
                         android:id="@+id/switch1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
                         android:text="@string/Abrov"
                         tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
 
                     <Switch
                         android:id="@+id/switch2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
                         android:text="@string/Abrov"
                         tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName13"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl">
+
+                    <TextView
+                        android:id="@+id/textView999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/num2"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/frame"/>
+
+                    <Spinner
+                        android:id="@+id/spinner999"
+                        android:layout_width="185dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Sections"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:textAlignment="center"
+                        android:background="@drawable/frame"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName9999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName12999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName15999"
+                        android:layout_width="406dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName14999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName11999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName10999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/switch1999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/switch2999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName13999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl">
+
+                    <TextView
+                        android:id="@+id/textView9999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/num3"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:background="@drawable/frame"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner9999"
+                        android:layout_width="185dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Sections"
+                        android:background="@drawable/frame"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:textAlignment="center"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName9999999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName129999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName159999"
+                        android:layout_width="406dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName149999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName119999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName109999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/switch19999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/switch299999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName139999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl">
+
+                    <TextView
+                        android:id="@+id/textView99999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/num4"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:background="@drawable/frame"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner999999"
+                        android:layout_width="185dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Sections"
+                        android:background="@drawable/frame"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:textAlignment="center"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonNam99999999e9999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName912999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName91599"
+                        android:layout_width="406dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName19499"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName19199"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName91099"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/switch9199"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/switch9299"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName19399"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl">
+
+                    <TextView
+                        android:id="@+id/textView99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/num5"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:background="@drawable/frame"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner99"
+                        android:layout_width="185dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Sections"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:textAlignment="center"
+                        android:background="@drawable/frame"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName1299"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName1599"
+                        android:layout_width="406dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName1499"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName1199"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName1099"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/switch199"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/switch299"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName1399"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
                         android:ems="10"
                         android:inputType="textPersonName"
                         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />

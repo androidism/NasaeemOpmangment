@@ -16,7 +16,11 @@
     <string name="Safety_Security">الأمن والسلامة</string>
     <string name="Administration">الإدارة</string>
     <string name="comments">تعليقات</string>
-    <string name="num">1</string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="num4">4</string>
+    <string name="num5">5</string>
     <string name="addtask">إضافة مهمة</string>
     <string name="target">الهدف</string>
 

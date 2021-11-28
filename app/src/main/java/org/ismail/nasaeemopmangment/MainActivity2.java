@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity2 extends AppCompatActivity {
     FloatingActionButton add_task, edit_task;
@@ -38,6 +37,10 @@ public class MainActivity2 extends AppCompatActivity {
         isAllFABVisible=false;
 
         fab.shrink();
+
+
+
+
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,21 +90,24 @@ public class MainActivity2 extends AppCompatActivity {
                 });
             }
         });
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-/*Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d(TAG, "Value is: " + value);
-            }
+   /*     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
+
+
+        add_tasks.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
+            public void onClick(View view) {
+                DatabaseReference  mDatabase = database.getReference("Tasks");
+
+                mDatabase.child("target").push().setValue(target.getText().toString());
+                mDatabase.child("name").push().setValue(name.getText().toString());
+                mDatabase.child("location").push().setValue(location.getText().toString());
+                mDatabase.child("depart").push().setValue(depart.getSelectedItem().toString());
+                mDatabase.child("team").push().setValue(team.getText().toString());
+                Intent intent = new Intent(Add_Task.this, MainActivity2.class);
+                startActivity(intent);
+                Toast.makeText(Add_Task.this,"بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها",Toast.LENGTH_SHORT).show();
+
             }
         });
 
