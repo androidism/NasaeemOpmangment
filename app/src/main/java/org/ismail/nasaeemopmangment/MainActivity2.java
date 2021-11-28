@@ -1,6 +1,5 @@
 package org.ismail.nasaeemopmangment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -75,8 +74,7 @@ public class MainActivity2 extends AppCompatActivity {
                 add_task.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(MainActivity2.this, Add_Task.class);
-                        startActivity(intent);
+
 
                         Toast.makeText(MainActivity2.this,"ضيف المهمة من بعد إذنك",Toast.LENGTH_SHORT).show();
                     }
