@@ -283,51 +283,29 @@
                     android:textAlignment="center"
                     android:textDirection="firstStrongRtl">
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/passtxtname1" />
-
-                    <Spinner
-                        android:id="@+id/spinner"
-                        style="@android:style/Widget.Material.Spinner.Underlined"
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/Sections"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_height="match_parent" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName11"
@@ -335,15 +313,21 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                        android:text="Name" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName12"
+                        android:id="@+id/editTextTextPersonName10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
-                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                        android:text="Name" />
 
                     <Switch
                         android:id="@+id/switch1"

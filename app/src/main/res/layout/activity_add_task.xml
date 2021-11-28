@@ -8,6 +8,18 @@
     tools:context=".Add_Task">
 
 
+    <Button
+        android:id="@+id/add_task"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:text="رفع المهمة"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -37,6 +49,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="#CCDFD7"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
                     android:rotation="181"
                     android:tint="#00FFFFFF"
                     app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
@@ -44,28 +58,17 @@
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar2"
-                    android:layout_width="285dp"
+                    android:layout_width="191dp"
                     android:layout_height="wrap_content"
                     android:background="?attr/colorPrimary"
                     android:minHeight="?attr/actionBarSize"
+                    android:layout_marginTop="5dp"
                     android:theme="?attr/actionBarTheme"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:title="@string/addtask" />
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#CCDFD7"
-                    android:tint="#00FFFFFF"
-                    app:backgroundTint="#4C5052"
-                    app:srcCompat="@drawable/ic_baseline_send_24"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
 
 
             </LinearLayout>
@@ -97,7 +100,7 @@
                 android:textColor="#000000" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/depart"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:entries="@array/Sections"
@@ -116,12 +119,13 @@
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName8"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
             <TextView
                 android:id="@+id/id4"
                 style="@style/Widget.AppCompat.TextView.SpinnerItem"
@@ -132,16 +136,15 @@
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 android:text="@string/target"
-                android:textColor="#000000"  />
+                android:textColor="#000000" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/target"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
 
 
             <TextView
@@ -154,7 +157,7 @@
                 android:text="@string/Staff" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName9"
+                android:id="@+id/team"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -172,7 +175,7 @@
                 android:text="@string/Location" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName10"
+                android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:ems="10"

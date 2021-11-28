@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">إدارة العمليات</string>
+    <string name="app_name" translatable="false">إدارة المهمات</string>
     <string name="usertxtname">UserName</string>
     <string name="passtxtname">Password</string>
     <string name="logtxtname">Login</string>
