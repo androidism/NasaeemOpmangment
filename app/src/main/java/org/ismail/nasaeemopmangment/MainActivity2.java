@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity2 extends AppCompatActivity {
+    public boolean isAppRunning = true;
+
+    public void setIsAppRunning(boolean v){
+        isAppRunning = v;
+    }
+
+    public boolean isAppRunning(){
+        return isAppRunning;
+    }
+
+
+
+
     FloatingActionButton add_task, edit_task;
     ExtendedFloatingActionButton fab;
     TextView ta_add, ta_edit;
@@ -34,6 +48,7 @@ TextView name1,target1,team1,location1,Section1;
 
 
     Boolean isAllFABVisible;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,24 +72,7 @@ TextView name1,target1,team1,location1,Section1;
 
 
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference mDatabase = database.getReference("Tasks");
 
-// Read from the database
-        mDatabase.child("name").child("-MpSFLv5row9RFyb81v9").addValueEventListener(new ValueEventListener() {
-
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                name1.setText(dataSnapshot.getValue(String.class));
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                //   Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +139,7 @@ TextView name1,target1,team1,location1,Section1;
                 });
 
 
+
                 name1 = findViewById(R.id.name1);
                 Section1 = findViewById(R.id.Section1);
                 target1 = findViewById(R.id.target1);
@@ -162,4 +161,40 @@ TextView name1,target1,team1,location1,Section1;
 
     }
 
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        edit_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference mDatabase = database.getReference("Tasks");
+
+                mDatabase.child("name").child("-MpSFLv5row9RFyb81v9").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        name1.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        //   Log.w(TAG, "Failed to read value.", error.toException());
+                    }
+                });
+            }
+        });
+
+
+
+// Read from the database
+
+
+
+    }
 }
