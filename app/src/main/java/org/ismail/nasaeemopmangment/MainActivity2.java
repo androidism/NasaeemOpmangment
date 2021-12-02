@@ -5,11 +5,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity2 extends AppCompatActivity {
     FloatingActionButton add_task, edit_task;
@@ -50,42 +55,64 @@ TextView name1,target1,team1,location1,Section1;
         fab.shrink();
 
 
+
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference mDatabase = database.getReference("Tasks");
+
+// Read from the database
+        mDatabase.child("name").child("-MpSFLv5row9RFyb81v9").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                name1.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                //   Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                 if (!isAllFABVisible){
-                     add_task.show();
-                     edit_task.show();
-                     ta_add.setVisibility(View.VISIBLE);
-                     ta_edit.setVisibility(View.VISIBLE);
+                if (!isAllFABVisible) {
+                    add_task.show();
+                    edit_task.show();
+                    ta_add.setVisibility(View.VISIBLE);
+                    ta_edit.setVisibility(View.VISIBLE);
 
-                     fab.extend();
-                     fab.setIconTintResource(R.color.design_default_color_error);
-                     fab.setRotation(44);
-
-
-                     isAllFABVisible=true;
+                    fab.extend();
+                    fab.setIconTintResource(R.color.design_default_color_error);
+                    fab.setRotation(44);
 
 
-                 }else {
-                     fab.setRotation(180);
-                     add_task.hide();
-                     edit_task.hide();
-                     ta_edit.setVisibility(View.GONE);
-                     ta_add.setVisibility(View.GONE);
-                     fab.shrink();
-                     fab.setIconTintResource(R.color.ic_cansl_background);
-
-                     isAllFABVisible=false;
+                    isAllFABVisible = true;
 
 
-                 }
+                } else {
+                    fab.setRotation(180);
+                    add_task.hide();
+                    edit_task.hide();
+                    ta_edit.setVisibility(View.GONE);
+                    ta_add.setVisibility(View.GONE);
+                    fab.shrink();
+                    fab.setIconTintResource(R.color.ic_cansl_background);
+
+                    isAllFABVisible = false;
+
+
+                }
 
                 add_task.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent=new Intent(MainActivity2.this,Add_Task.class);
+                        Intent intent = new Intent(MainActivity2.this, Add_Task.class);
                         startActivity(intent);
 
 
@@ -109,33 +136,29 @@ TextView name1,target1,team1,location1,Section1;
 
                         });*/
 
-                        Toast.makeText(MainActivity2.this,"ضيف المهمة من بعد إذنك",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity2.this, "ضيف المهمة من بعد إذنك", Toast.LENGTH_SHORT).show();
                     }
                 });
 
 
-
-                name1=findViewById(R.id.name1);
-                Section1=findViewById(R.id.Section1);
-                target1=findViewById(R.id.target1);
-                team1=findViewById(R.id.team1);
-                location1=findViewById(R.id.location1);
-
-
-                edit_task.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+                name1 = findViewById(R.id.name1);
+                Section1 = findViewById(R.id.Section1);
+                target1 = findViewById(R.id.target1);
+                team1 = findViewById(R.id.team1);
+                location1 = findViewById(R.id.location1);
 
 
 
 
 
 
+                      //  Toast.makeText(MainActivity2.this, "بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها", Toast.LENGTH_SHORT).show();
 
-                                Toast.makeText(MainActivity2.this, "بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها", Toast.LENGTH_SHORT).show();
-                    }
-                });           }
+            }
         });
+
+
+
 
     }
 
