@@ -25,7 +25,7 @@
     <string name="target">الهدف</string>
 
 
-    <string name="edittask">تعديل المهمة</string>
+    <string name="edittask">إرسال المهمة</string>
     <string name="Abrov">الموافقة</string>
     <string-array name="Sections">اختر
         <item>WFP</item>

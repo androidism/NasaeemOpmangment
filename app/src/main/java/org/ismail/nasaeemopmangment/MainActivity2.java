@@ -1,5 +1,6 @@
 package org.ismail.nasaeemopmangment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -15,6 +16,18 @@ public class MainActivity2 extends AppCompatActivity {
     ExtendedFloatingActionButton fab;
     TextView ta_add, ta_edit;
 
+
+    //EditText name1,name2,name3,name4,name5;
+
+   // EditText target1 ,target2,target3,target4,target5;
+
+  //  EditText team1,team2,team3,team4,team5;
+
+  //  EditText location1,location2,location3,location4,location5;
+TextView name1,target1,team1,location1,Section1;
+
+
+
     Boolean isAllFABVisible;
 
     @Override
@@ -27,8 +40,6 @@ public class MainActivity2 extends AppCompatActivity {
         ta_add = findViewById(R.id.ta_add);
         ta_edit = findViewById(R.id.ta_edit);
 
-
-
         ta_add.setVisibility(View.GONE);
         ta_edit.setVisibility(View.GONE);
         edit_task.setVisibility(View.GONE);
@@ -37,9 +48,6 @@ public class MainActivity2 extends AppCompatActivity {
         isAllFABVisible=false;
 
         fab.shrink();
-
-
-
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -77,41 +85,58 @@ public class MainActivity2 extends AppCompatActivity {
                 add_task.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        Intent intent=new Intent(MainActivity2.this,Add_Task.class);
+                        startActivity(intent);
 
+
+                        /*
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        DatabaseReference mDatabase = database.getReference("nm");
+                        mDatabase.addValueEventListener (new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                // This method is called once with the initial value and again
+                                // whenever data at this location is updated.
+                                String textView2  = dataSnapshot.getValue(String.class);
+                                Log.d(TAG,textView2.toString());
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                               // Log.w(TAG, "Failed to read value.", error.toException());
+
+                            }
+
+                        });*/
 
                         Toast.makeText(MainActivity2.this,"ضيف المهمة من بعد إذنك",Toast.LENGTH_SHORT).show();
                     }
                 });
+
+
+
+                name1=findViewById(R.id.name1);
+                Section1=findViewById(R.id.Section1);
+                target1=findViewById(R.id.target1);
+                team1=findViewById(R.id.team1);
+                location1=findViewById(R.id.location1);
+
+
                 edit_task.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(MainActivity2.this,"أعطي الموفقة لو سمحت",Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+
+                                Toast.makeText(MainActivity2.this, "بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها", Toast.LENGTH_SHORT).show();
                     }
-                });
-            }
-        });
-   /*     FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-
-
-        add_tasks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DatabaseReference  mDatabase = database.getReference("Tasks");
-
-                mDatabase.child("target").push().setValue(target.getText().toString());
-                mDatabase.child("name").push().setValue(name.getText().toString());
-                mDatabase.child("location").push().setValue(location.getText().toString());
-                mDatabase.child("depart").push().setValue(depart.getSelectedItem().toString());
-                mDatabase.child("team").push().setValue(team.getText().toString());
-                Intent intent = new Intent(Add_Task.this, MainActivity2.class);
-                startActivity(intent);
-                Toast.makeText(Add_Task.this,"بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها",Toast.LENGTH_SHORT).show();
-
-            }
+                });           }
         });
 
-*/
     }
 
 }

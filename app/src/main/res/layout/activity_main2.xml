@@ -300,62 +300,67 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@drawable/frame"
                         android:text="@string/num1"
+                        android:background="@drawable/frame"
                         android:textAlignment="center"
                         android:textColor="#0C0C0C"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <Spinner
-                        android:id="@+id/spinner"
-                        android:layout_width="185dp"
-                        android:layout_height="match_parent"
-                        android:entries="@array/Sections"
-                        tools:ignore="TouchTargetSizeCheck"
+                    <TextView
+                        android:id="@+id/Section1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/frame"
                         android:textAlignment="center"
-                        android:background="@drawable/frame"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                        />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName9"
+                    <TextView
+                        android:id="@+id/name1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/frame"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text=""
-                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                        android:layout_height="wrap_content"
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName12"
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/target1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/frame"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text=""
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_height="wrap_content"
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName15"
-                        android:layout_width="406dp"
-                        android:layout_height="match_parent"
                         android:background="@drawable/frame"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="" />
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName14"
+                    <TextView
+                        android:id="@+id/team1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+
                         android:background="@drawable/frame"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text=""
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/location1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName11"

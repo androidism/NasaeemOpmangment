@@ -1,22 +1,32 @@
 package org.ismail.nasaeemopmangment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Add_Task extends AppCompatActivity {
-/*
+
     FloatingActionButton fl_back;
     EditText name, target,team,location;
     Spinner depart;
     Button add_tasks;
-*/
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       /*setContentView(R.layout.activity_add_task);
+      setContentView(R.layout.activity_add_task);
         getSupportActionBar().hide();
 
         fl_back=findViewById(R.id.fl_back);
@@ -47,7 +57,7 @@ public class Add_Task extends AppCompatActivity {
         add_tasks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference  mDatabase = database.getReference("Tasks");
+                DatabaseReference mDatabase = database.getReference("Tasks");
 
                 mDatabase.child("target").push().setValue(target.getText().toString());
                 mDatabase.child("name").push().setValue(name.getText().toString());
@@ -62,6 +72,6 @@ public class Add_Task extends AppCompatActivity {
         });
 
 
-*/
+
 }
 }
