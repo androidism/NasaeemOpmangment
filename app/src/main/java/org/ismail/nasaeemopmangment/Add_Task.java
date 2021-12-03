@@ -20,6 +20,7 @@ public class Add_Task extends AppCompatActivity {
     EditText name, target,team,location;
     Spinner depart;
     Button add_tasks;
+    int numTask=1 , x=1;
 
 
 
@@ -58,15 +59,30 @@ public class Add_Task extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatabaseReference mDatabase = database.getReference("Tasks");
+                switch (numTask) {
+                    case 1:
 
-                mDatabase.child("target").push().setValue(target.getText().toString());
-                mDatabase.child("name").push().setValue(name.getText().toString());
-                mDatabase.child("location").push().setValue(location.getText().toString());
-                mDatabase.child("depart").push().setValue(depart.getSelectedItem().toString());
-                mDatabase.child("team").push().setValue(team.getText().toString());
+
+                        mDatabase.child("1").child("target").setValue(target.getText().toString());
+                        mDatabase.child("1").child("name").setValue(name.getText().toString());
+                        mDatabase.child("1").child("location").setValue(location.getText().toString());
+                        mDatabase.child("1").child("depart").setValue(depart.getSelectedItem().toString());
+                        mDatabase.child("1").child("team").setValue(team.getText().toString());
+                        numTask=2;
+                        break;
+                    case 2:
+                        mDatabase.child("2").child("target").setValue(target.getText().toString());
+                        mDatabase.child("2").child("name").setValue(name.getText().toString());
+                        mDatabase.child("2").child("location").setValue(location.getText().toString());
+                        mDatabase.child("2").child("depart").setValue(depart.getSelectedItem().toString());
+                        mDatabase.child("2").child("team").setValue(team.getText().toString());
+                        numTask=numTask+x;
+                        break;
+                }
+
                 Intent intent = new Intent(Add_Task.this, MainActivity2.class);
                 startActivity(intent);
-                Toast.makeText(Add_Task.this,"بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Add_Task.this, "بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها", Toast.LENGTH_SHORT).show();
 
             }
         });
