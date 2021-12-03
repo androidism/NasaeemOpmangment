@@ -36,14 +36,12 @@ public class MainActivity2 extends AppCompatActivity {
     TextView ta_add, ta_edit;
 
 
-    //EditText name1,name2,name3,name4,name5;
 
-   // EditText target1 ,target2,target3,target4,target5;
-
-  //  EditText team1,team2,team3,team4,team5;
-
-  //  EditText location1,location2,location3,location4,location5;
-TextView name1,target1,team1,location1,Section1;
+TextView name1,target1,team1,location1,Section1,
+    name2,target2,team2,location2,Section2,
+    name3,target3,team3,location3,Section3,
+    name4,target4,team4,location4,Section4,
+    name5,target5,team5,location5,Section5;
 
 
 
@@ -114,25 +112,6 @@ TextView name1,target1,team1,location1,Section1;
                         startActivity(intent);
 
 
-                        /*
-                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference mDatabase = database.getReference("nm");
-                        mDatabase.addValueEventListener (new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                // This method is called once with the initial value and again
-                                // whenever data at this location is updated.
-                                String textView2  = dataSnapshot.getValue(String.class);
-                                Log.d(TAG,textView2.toString());
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-                               // Log.w(TAG, "Failed to read value.", error.toException());
-
-                            }
-
-                        });*/
 
                         Toast.makeText(MainActivity2.this, "ضيف المهمة من بعد إذنك", Toast.LENGTH_SHORT).show();
                     }
@@ -140,23 +119,44 @@ TextView name1,target1,team1,location1,Section1;
 
 
 
-                name1 = findViewById(R.id.name1);
-                Section1 = findViewById(R.id.Section1);
-                target1 = findViewById(R.id.target1);
-                team1 = findViewById(R.id.team1);
-                location1 = findViewById(R.id.location1);
 
 
 
 
 
 
-                      //  Toast.makeText(MainActivity2.this, "بالتوفيق في مهمتك ولاتنسى تتأكد من الموافقة عليها", Toast.LENGTH_SHORT).show();
 
             }
         });
+        name1 = findViewById(R.id.name1);
+        Section1 = findViewById(R.id.Section1);
+        target1 = findViewById(R.id.target1);
+        team1 = findViewById(R.id.team1);
+        location1 = findViewById(R.id.location1);
 
+        name2 = findViewById(R.id.name2);
+        Section2 = findViewById(R.id.Section2);
+        target2 = findViewById(R.id.target2);
+        team2 = findViewById(R.id.team2);
+        location2 = findViewById(R.id.location2);
 
+        name3 = findViewById(R.id.name3);
+        Section3 = findViewById(R.id.Section3);
+        target3 = findViewById(R.id.target3);
+        team3 = findViewById(R.id.team3);
+        location3 = findViewById(R.id.location3);
+
+        name4 = findViewById(R.id.name4);
+        Section4 = findViewById(R.id.Section4);
+        target4 = findViewById(R.id.target4);
+        team4 = findViewById(R.id.team4);
+        location4 = findViewById(R.id.location4);
+
+        name5 = findViewById(R.id.name5);
+        Section5 = findViewById(R.id.Section5);
+        target5 = findViewById(R.id.target5);
+        team5 = findViewById(R.id.team5);
+        location5 = findViewById(R.id.location5);
 
 
     }
@@ -167,12 +167,43 @@ TextView name1,target1,team1,location1,Section1;
 
         super.onResume();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference mDatabase = database.getReference("Tasks");
         edit_task.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference mDatabase = database.getReference("Tasks");
 
-                mDatabase.child("name").child("-MpSFLv5row9RFyb81v9").addValueEventListener(new ValueEventListener() {
+
+                mDatabase.child("1").child("depart").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Section1.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("1").child("location").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        location1.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("1").child("name").addValueEventListener(new ValueEventListener() {
 
 
 
@@ -184,15 +215,350 @@ TextView name1,target1,team1,location1,Section1;
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        //   Log.w(TAG, "Failed to read value.", error.toException());
+
+                    }
+                });
+                mDatabase.child("1").child("target").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        target1.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("1").child("team").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        team1.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
+                mDatabase.child("2").child("depart").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Section2.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
+                mDatabase.child("2").child("location").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        location2.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("2").child("name").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        name2.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("2").child("target").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        target2.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("2").child("team").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        team2.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+                mDatabase.child("3").child("depart").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Section3.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                     //  error.toException();
+                    }
+                });
+
+                mDatabase.child("3").child("location").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        location3.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        error.toException();
+                    }
+                });
+                mDatabase.child("3").child("name").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        name3.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("3").child("target").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        target3.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("3").child("team").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        team3.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+                mDatabase.child("4").child("depart").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Section4.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("4").child("location").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        location4.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("4").child("name").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        name4.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("4").child("target").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        target4.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("4").child("team").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        team4.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("5").child("depart").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Section5.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("5").child("location").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        location5.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("5").child("name").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        name5.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("5").child("target").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        target5.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                mDatabase.child("5").child("team").addValueEventListener(new ValueEventListener() {
+
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        team5.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
                     }
                 });
             }
         });
 
 
-
-// Read from the database
 
 
 
