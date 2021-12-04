@@ -3,6 +3,7 @@ package org.ismail.nasaeemopmangment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,10 +43,11 @@ TextView name1,target1,team1,location1,Section1,
     name3,target3,team3,location3,Section3,
     name4,target4,team4,location4,Section4,
     name5,target5,team5,location5,Section5;
+TableRow Tab1;
 
 
 
-    Boolean isAllFABVisible;
+    Boolean isAllFABVisible,v;
 
 
     @Override
@@ -157,6 +159,7 @@ TextView name1,target1,team1,location1,Section1,
         target5 = findViewById(R.id.target5);
         team5 = findViewById(R.id.team5);
         location5 = findViewById(R.id.location5);
+        Tab1= findViewById(R.id.Tab1);
 
 
     }
@@ -164,13 +167,15 @@ TextView name1,target1,team1,location1,Section1,
 
     @Override
     public void onResume() {
-
+        v=true;
         super.onResume();
+        setIsAppRunning(v);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference mDatabase = database.getReference("Tasks");
-        edit_task.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+
+       // edit_task.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+         //   public void onClick(View view) {
 
 
                 mDatabase.child("1").child("depart").addValueEventListener(new ValueEventListener() {
@@ -555,8 +560,8 @@ TextView name1,target1,team1,location1,Section1,
 
                     }
                 });
-            }
-        });
+       //     }
+   //     });
 
 
 
