@@ -208,6 +208,20 @@
                         android:textColor="#000000"
                         android:textStyle="bold"
                         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    <TextView
+                        android:id="@+id/id5"
+                        android:textAlignment="center"
+                        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/frame"
+                        android:layout_height="30dp"
+                        android:minHeight="48dp"
+                        android:textSize="18sp"
+                        android:text="@string/point"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                     <TextView
                         android:id="@+id/editTextTextPersonName"
@@ -353,6 +367,17 @@
                       />
 
                     <TextView
+                        android:id="@+id/point1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        />
+
+                    <TextView
                         android:id="@+id/team1"
                         android:layout_width="450dp"
                         android:layout_height="wrap_content"
@@ -469,6 +494,17 @@
                         android:textColor="#0C0C0C"
                         android:textSize="20sp"
                     />
+                    <TextView
+                        android:id="@+id/point2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        />
+
 
                     <TextView
                         android:id="@+id/team2"
@@ -588,6 +624,17 @@
                         android:textColor="#0C0C0C"
                         android:textSize="20sp"
                        />
+                    <TextView
+                        android:id="@+id/point3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        />
+
 
                     <TextView
                         android:id="@+id/team3"
@@ -707,6 +754,17 @@
                         android:textColor="#0C0C0C"
                         android:textSize="20sp"
                     />
+                    <TextView
+                        android:id="@+id/point4"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        />
+
 
                     <TextView
                         android:id="@+id/team4"
@@ -825,6 +883,17 @@
                         android:textColor="#0C0C0C"
                         android:textSize="20sp"
                         />
+                    <TextView
+                        android:id="@+id/point5"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="20sp"
+                        />
+
 
                     <TextView
                         android:id="@+id/team5"

@@ -38,11 +38,11 @@ public class MainActivity2 extends AppCompatActivity {
 
 
 
-TextView name1,target1,team1,location1,Section1,
-    name2,target2,team2,location2,Section2,
-    name3,target3,team3,location3,Section3,
-    name4,target4,team4,location4,Section4,
-    name5,target5,team5,location5,Section5;
+TextView name1,point1,target1,team1,location1,Section1,
+    name2,point2,target2,team2,location2,Section2,
+    name3,point3,target3,team3,location3,Section3,
+    name4,point4,target4,team4,location4,Section4,
+    name5,point5,target5,team5,location5,Section5;
 TableRow Tab1;
 
 
@@ -131,30 +131,35 @@ TableRow Tab1;
             }
         });
         name1 = findViewById(R.id.name1);
+        point1 = findViewById(R.id.point1);
         Section1 = findViewById(R.id.Section1);
         target1 = findViewById(R.id.target1);
         team1 = findViewById(R.id.team1);
         location1 = findViewById(R.id.location1);
 
         name2 = findViewById(R.id.name2);
+        point2 = findViewById(R.id.point2);
         Section2 = findViewById(R.id.Section2);
         target2 = findViewById(R.id.target2);
         team2 = findViewById(R.id.team2);
         location2 = findViewById(R.id.location2);
 
         name3 = findViewById(R.id.name3);
+        point3 = findViewById(R.id.point3);
         Section3 = findViewById(R.id.Section3);
         target3 = findViewById(R.id.target3);
         team3 = findViewById(R.id.team3);
         location3 = findViewById(R.id.location3);
 
         name4 = findViewById(R.id.name4);
+        point4 = findViewById(R.id.point4);
         Section4 = findViewById(R.id.Section4);
         target4 = findViewById(R.id.target4);
         team4 = findViewById(R.id.team4);
         location4 = findViewById(R.id.location4);
 
         name5 = findViewById(R.id.name5);
+        point5 = findViewById(R.id.point5);
         Section5 = findViewById(R.id.Section5);
         target5 = findViewById(R.id.target5);
         team5 = findViewById(R.id.team5);
@@ -193,6 +198,21 @@ TableRow Tab1;
 
                     }
                 });
+        mDatabase.child("1").child("point").addValueEventListener(new ValueEventListener() {
+
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                point1.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
                 mDatabase.child("1").child("location").addValueEventListener(new ValueEventListener() {
 
 
@@ -270,7 +290,21 @@ TableRow Tab1;
 
                     }
                 });
+        mDatabase.child("2").child("point").addValueEventListener(new ValueEventListener() {
 
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                point2.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
                 mDatabase.child("2").child("location").addValueEventListener(new ValueEventListener() {
 
@@ -348,6 +382,21 @@ TableRow Tab1;
                      //  error.toException();
                     }
                 });
+        mDatabase.child("3").child("point").addValueEventListener(new ValueEventListener() {
+
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                point3.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
                 mDatabase.child("3").child("location").addValueEventListener(new ValueEventListener() {
 
@@ -425,6 +474,21 @@ TableRow Tab1;
 
                     }
                 });
+        mDatabase.child("4").child("point").addValueEventListener(new ValueEventListener() {
+
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                point4.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
                 mDatabase.child("4").child("location").addValueEventListener(new ValueEventListener() {
 
 
@@ -500,6 +564,21 @@ TableRow Tab1;
 
                     }
                 });
+        mDatabase.child("5").child("point").addValueEventListener(new ValueEventListener() {
+
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                point5.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
                 mDatabase.child("5").child("location").addValueEventListener(new ValueEventListener() {
 
 

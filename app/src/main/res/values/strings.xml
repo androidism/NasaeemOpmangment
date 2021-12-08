@@ -10,6 +10,7 @@
     <string name="Section">القسم</string>
     <string name="name">الاسم</string>
     <string name="Staff">فريق العمل</string>
+    <string name="point">نقطة الانطلاق</string>
     <string name="Location">الموقع</string>
     <string name="monitoring_team">فريق المراقبة</string>
     <string name="drivers_name">اسم السائق</string>
@@ -31,7 +32,6 @@
         <item>WFP</item>
         <item>التعليم</item>
         <item>الحماية</item>
-        <item>التغذية</item>
         <item>المراقبة</item>
         <item>الأمن والسلام</item>
         <item>اللوجستي</item>
@@ -41,6 +41,29 @@
         <item>الإعلامي</item>
         <item>المعلومات</item>
         <item>الإدارة</item>
+
+    </string-array>
+    <string-array name="nameall">اختر
+        <item>إياد خالد</item>
+        <item>وليد شيخ يوسف</item>
+        <item>محمد الحسن</item>
+        <item>عبد الله الخشن</item>
+        <item>أكرم الخشن</item>
+        <item>عبد الحميد السليم</item>
+        <item>مصطفى دلو</item>
+        <item>أحمد التركي</item>
+        <item>محمود دلو</item>
+        <item>وحيد الخالد</item>
+        <item>عمار الأحمد</item>
+        <item>أحمد الخالد</item>
+        <item>تميم احمدو</item>
+        <item>الإدارة</item>
+        <item>رشا زيتون</item>
+
+    </string-array>
+    <string-array name="point">اختر
+        <item>من المكتب</item>
+        <item>مباشر</item>
 
     </string-array>
     <string name="title_activity_add_task">Add_Task</string>
