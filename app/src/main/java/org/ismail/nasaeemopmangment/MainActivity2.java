@@ -43,7 +43,8 @@ TextView name1,point1,target1,team1,location1,Section1,
     name3,point3,target3,team3,location3,Section3,
     name4,point4,target4,team4,location4,Section4,
     name5,point5,target5,team5,location5,Section5;
-TableRow Tab1;
+TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
+    Integer numTask;
 
 
 
@@ -128,6 +129,7 @@ TableRow Tab1;
 
 
 
+
             }
         });
         name1 = findViewById(R.id.name1);
@@ -165,6 +167,12 @@ TableRow Tab1;
         team5 = findViewById(R.id.team5);
         location5 = findViewById(R.id.location5);
         Tab1= findViewById(R.id.Tab1);
+        Tab2= findViewById(R.id.Tab2);
+        Tab3= findViewById(R.id.Tab3);
+        Tab4= findViewById(R.id.Tab4);
+        Tab5= findViewById(R.id.Tab5);
+
+
 
 
     }
@@ -176,6 +184,54 @@ TableRow Tab1;
         super.onResume();
         setIsAppRunning(v);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference num = database.getReference("numTask");
+        num.addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                numTask = dataSnapshot.getValue(Integer.class);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        edit_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (numTask==2)
+                    Tab1.setVisibility(View.VISIBLE);
+
+
+                Toast.makeText(MainActivity2.this, "ضيف المهمة من بعد إذنك", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+      /*   if (numTask==2)
+            Tab1.setVisibility(View.VISIBLE);
+            Tab2.setVisibility(View.VISIBLE);
+            if (numTask==3)
+        Tab1.setVisibility(View.VISIBLE);
+        Tab2.setVisibility(View.VISIBLE);
+        Tab3.setVisibility(View.VISIBLE);
+              if (numTask==4)
+        Tab1.setVisibility(View.VISIBLE);
+        Tab2.setVisibility(View.VISIBLE);
+        Tab3.setVisibility(View.VISIBLE);
+        Tab4.setVisibility(View.VISIBLE);
+              if (numTask==5)
+        Tab1.setVisibility(View.VISIBLE);
+        Tab2.setVisibility(View.VISIBLE);
+        Tab3.setVisibility(View.VISIBLE);
+        Tab4.setVisibility(View.VISIBLE);
+        Tab5.setVisibility(View.VISIBLE);
+*/
         DatabaseReference mDatabase = database.getReference("Tasks");
 
        // edit_task.setOnClickListener(new View.OnClickListener() {

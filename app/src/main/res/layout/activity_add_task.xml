@@ -8,204 +8,217 @@
     tools:context=".Add_Task">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <Button
+        android:id="@+id/add_task"
+
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+
+        android:text="رفع المهمة"
+
+
+        android:textAlignment="center"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <com.google.android.material.appbar.AppBarLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/fl_back"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fl_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#CCDFD7"
+                        android:rotation="181"
+                        android:tint="#00FFFFFF"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar2"
+                        android:layout_width="191dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="?attr/colorPrimary"
+                        android:minHeight="?attr/actionBarSize"
+                        android:theme="?attr/actionBarTheme"
+                        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:title="@string/addtask" />
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/id1"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#CCDFD7"
-                    android:rotation="181"
-                    android:tint="#00FFFFFF"
-                    app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="@string/Section"
+                    android:textColor="#000000" />
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar2"
-                    android:layout_width="191dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="?attr/actionBarSize"
-                    android:theme="?attr/actionBarTheme"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:title="@string/addtask" />
+                <Spinner
+                    android:id="@+id/depart"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/Sections"
+                    tools:ignore="TouchTargetSizeCheck" />
 
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/id3"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:minHeight="48dp"
+                    android:text="@string/name"
+                    android:textColor="#000000"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <Spinner
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/nameall"
+                    tools:ignore="TouchTargetSizeCheck" />
 
 
-        </com.google.android.material.appbar.AppBarLayout>
+                <TextView
+                    android:id="@+id/id4"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="@string/target"
+                    android:textColor="#000000" />
 
-            <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="15dp"
-                android:background="?android:attr/listDivider"
-                android:backgroundTint="#FFFFFF" />
+                <EditText
+                    android:id="@+id/target"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-            <TextView
-                android:id="@+id/id1"
-                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                <TextView
+                    android:id="@+id/pointa"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
 
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:fontFamily="sans-serif"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:text="@string/Section"
-                android:textColor="#000000" />
-
-            <Spinner
-                android:id="@+id/depart"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:entries="@array/Sections"
-                tools:ignore="TouchTargetSizeCheck" />
-
-
-            <TextView
-                android:id="@+id/id3"
-                style="@style/Widget.AppCompat.TextView.SpinnerItem"
-
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:minHeight="48dp"
-                android:text="@string/name"
-                android:textColor="#000000"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <Spinner
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:entries="@array/nameall"
-                tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="@string/point"
+                    android:textColor="#000000" />
 
 
-            <TextView
-                android:id="@+id/id4"
-                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                <Spinner
+                    android:id="@+id/point"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/point"
+                    tools:ignore="TouchTargetSizeCheck" />
 
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:fontFamily="sans-serif"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:text="@string/target"
-                android:textColor="#000000" />
+                <TextView
+                    android:id="@+id/editTextTextPersonName"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:minHeight="48dp"
+                    android:text="@string/Staff" />
 
-            <EditText
-                android:id="@+id/target"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/pointa"
-                style="@style/Widget.AppCompat.TextView.SpinnerItem"
-
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:fontFamily="sans-serif"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:text="@string/point"
-                android:textColor="#000000" />
+                <EditText
+                    android:id="@+id/team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
-            <Spinner
-                android:id="@+id/point"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:entries="@array/point"
-                tools:ignore="TouchTargetSizeCheck" />
+                <TextView
+                    android:id="@+id/editTextTextPersonName2"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:minHeight="48dp"
+                    android:text="@string/Location" />
 
-            <TextView
-                android:id="@+id/editTextTextPersonName"
-                style="@style/Widget.AppCompat.TextView.SpinnerItem"
-                android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:ems="10"
-                android:minHeight="48dp"
-                android:text="@string/Staff" />
-
-            <EditText
-                android:id="@+id/team"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
-            <TextView
-                android:id="@+id/editTextTextPersonName2"
-                style="@style/Widget.AppCompat.TextView.SpinnerItem"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:ems="10"
-                android:minHeight="48dp"
-                android:text="@string/Location" />
+            </TableLayout>
 
-            <EditText
-                android:id="@+id/location"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </LinearLayout>
+    </ScrollView>
 
-
-        </TableLayout>
-
-        <Button
-            android:id="@+id/add_task"
-            android:layout_width="140dp"
-            android:layout_height="60dp"
-
-            android:text="رفع المهمة"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-    </LinearLayout>
-
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

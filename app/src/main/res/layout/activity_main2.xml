@@ -39,8 +39,8 @@
 
         android:id="@+id/add_task"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
         android:layout_marginTop="426dp"
         android:layout_marginBottom="1dp"
         android:backgroundTint="#36767C"
@@ -48,15 +48,15 @@
         android:src="@drawable/ic_edit2_foreground"
         app:backgroundTint="#E1E1E1"
         app:fabSize="normal"
+
         app:iconPadding="15dp"
 
         app:iconSize="65dp"
-
         app:layout_constraintBottom_toBottomOf="@id/fab"
         app:layout_constraintBottom_toTopOf="@id/fab"
         app:layout_constraintEnd_toEndOf="@id/fab"
-        app:layout_constraintStart_toStartOf="@id/fab"
 
+        app:layout_constraintStart_toStartOf="@id/fab"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck">
 
@@ -145,7 +145,7 @@
                 android:layout_height="match_parent">
 
                 <TableRow
-                    android:id="@+id/Tab1"
+                    android:id="@+id/Tab999999999"
                     android:layout_width="388dp"
                     android:layout_height="2dp"
                     android:background="#7ABB41">
@@ -153,7 +153,7 @@
                     <TextView
                         android:id="@+id/editTextNumber"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-                        android:layout_width="68dp"
+                        android:layout_width="75dp"
                         android:layout_height="30dp"
                         android:background="@drawable/frame"
                         android:ems="10"
@@ -228,7 +228,7 @@
                         android:textAlignment="center"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
                         android:background="@drawable/frame"
-                        android:layout_width="70dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:ems="10"
                         android:textSize="18sp"
@@ -241,7 +241,7 @@
                         android:textAlignment="center"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
                         android:background="@drawable/frame"
-                        android:layout_width="60dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:textSize="18sp"
                         android:ems="10"
@@ -254,7 +254,7 @@
                         android:textAlignment="center"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
                         android:background="@drawable/frame"
-                        android:layout_width="97dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:ems="10"
                         android:textSize="18sp"
@@ -267,7 +267,7 @@
                         android:textAlignment="center"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
                         android:background="@drawable/frame"
-                        android:layout_width="100dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:ems="10"
                         android:textSize="18sp"
@@ -278,7 +278,7 @@
                     <TextView
                         android:id="@+id/editTextTextPersonName5"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-                        android:layout_width="100dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:background="@drawable/frame"
                         android:ems="10"
@@ -290,7 +290,7 @@
                     <TextView
                         android:id="@+id/editTextTextPersonName6"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-                        android:layout_width="60dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:background="@drawable/frame"
                         android:ems="10"
@@ -302,7 +302,7 @@
                     <TextView
                         android:id="@+id/editTextTextPersonName7"
                         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-                        android:layout_width="60dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:background="@drawable/frame"
                         android:ems="10"
@@ -315,8 +315,10 @@
 
 
                 <TableRow
+                    android:id="@+id/Tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     android:textAlignment="center"
                     android:textDirection="firstStrongRtl"
 
@@ -335,7 +337,7 @@
 
                     <TextView
                         android:id="@+id/Section1"
-                        android:layout_width="170dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -346,7 +348,7 @@
 
                     <TextView
                         android:id="@+id/name1"
-                        android:layout_width="220dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -357,7 +359,7 @@
 
                     <TextView
                         android:id="@+id/target1"
-                        android:layout_width="200dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -368,7 +370,7 @@
 
                     <TextView
                         android:id="@+id/point1"
-                        android:layout_width="200dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -379,7 +381,7 @@
 
                     <TextView
                         android:id="@+id/team1"
-                        android:layout_width="450dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -390,7 +392,7 @@
 
                     <TextView
                         android:id="@+id/location1"
-                        android:layout_width="150dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -447,8 +449,10 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/Tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     android:textAlignment="center"
                     android:textDirection="firstStrongRtl">
                     <TextView
@@ -464,7 +468,7 @@
 
                     <TextView
                         android:id="@+id/Section2"
-                        android:layout_width="170dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -496,7 +500,7 @@
                     />
                     <TextView
                         android:id="@+id/point2"
-                        android:layout_width="200dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
@@ -576,8 +580,10 @@
 
                 </TableRow>
                 <TableRow
+                    android:id="@+id/Tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     android:textAlignment="center"
                     android:textDirection="firstStrongRtl">
 
@@ -706,8 +712,10 @@
 
                 </TableRow>
                 <TableRow
+                    android:id="@+id/Tab4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     android:textAlignment="center"
                     android:textDirection="firstStrongRtl">
 
@@ -835,9 +843,11 @@
 
                 </TableRow>
                 <TableRow
+                    android:id="@+id/Tab5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textAlignment="center"
+                    android:visibility="gone"
                     android:textDirection="firstStrongRtl">
 
                     <TextView
@@ -885,7 +895,7 @@
                         />
                     <TextView
                         android:id="@+id/point5"
-                        android:layout_width="200dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:background="@drawable/frame"
