@@ -200,17 +200,9 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
-        edit_task.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (numTask==2)
-                    Tab1.setVisibility(View.VISIBLE);
 
 
-                Toast.makeText(MainActivity2.this, "ضيف المهمة من بعد إذنك", Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
 
       /*   if (numTask==2)
@@ -466,7 +458,7 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        error.toException();
+
                     }
                 });
                 mDatabase.child("3").child("name").addValueEventListener(new ValueEventListener() {
@@ -694,9 +686,11 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
                     public void onCancelled(@NonNull DatabaseError error) {
 
                     }
+
                 });
        //     }
    //     });
+
 
 
 
