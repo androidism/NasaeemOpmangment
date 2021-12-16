@@ -6,7 +6,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,12 +49,16 @@ TextView name1,point1,target1,team1,location1,Section1,
     name3,point3,target3,team3,location3,Section3,
     name4,point4,target4,team4,location4,Section4,
     name5,point5,target5,team5,location5,Section5;
+
+   EditText tmael1, tmael2, tmael3, tmael4, tmael5,
+        driver1,driver2,driver3,driver4,driver5,
+        comment1,comment2,comment3,comment4,comment5;
 TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
     Integer numTask;
 
 
 
-    Boolean isAllFABVisible,v,valid=true;
+    Boolean isAllFABVisible,v;
 
 
     @Override
@@ -176,7 +182,23 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
         Tab4= findViewById(R.id.Tab4);
         Tab5= findViewById(R.id.Tab5);
 
+        tmael1= findViewById(R.id.tmael1);
+        tmael2= findViewById(R.id.tmael2);
+        tmael3= findViewById(R.id.tmael3);
+        tmael4= findViewById(R.id.tmael4);
+        tmael5= findViewById(R.id.tmael5);
 
+        driver1= findViewById(R.id.driver1);
+        driver2= findViewById(R.id.driver2);
+        driver3= findViewById(R.id.driver3);
+        driver4= findViewById(R.id.driver4);
+        driver5= findViewById(R.id.driver5);
+
+        comment1= findViewById(R.id.comment1);
+        comment2= findViewById(R.id.comment2);
+        comment3= findViewById(R.id.comment3);
+        comment4= findViewById(R.id.comment4);
+        comment5= findViewById(R.id.comment5);
 
 
     }
@@ -196,8 +218,8 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 numTask = dataSnapshot.getValue(Integer.class);
-                if (numTask == 2)
-                    Tab1.setVisibility(View.VISIBLE);
+                if (numTask == 2){
+                    Tab1.setVisibility(View.VISIBLE);}
                 if (numTask == 3) {
                     Tab1.setVisibility(View.VISIBLE);
                     Tab2.setVisibility(View.VISIBLE);
@@ -222,6 +244,7 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
                 }
 
 
+
             }
 
             @Override
@@ -236,33 +259,86 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
 
 
-
-
-
-      /*   if (numTask==2)
-            Tab1.setVisibility(View.VISIBLE);
-            Tab2.setVisibility(View.VISIBLE);
-            if (numTask==3)
-        Tab1.setVisibility(View.VISIBLE);
-        Tab2.setVisibility(View.VISIBLE);
-        Tab3.setVisibility(View.VISIBLE);
-              if (numTask==4)
-        Tab1.setVisibility(View.VISIBLE);
-        Tab2.setVisibility(View.VISIBLE);
-        Tab3.setVisibility(View.VISIBLE);
-        Tab4.setVisibility(View.VISIBLE);
-              if (numTask==5)
-        Tab1.setVisibility(View.VISIBLE);
-        Tab2.setVisibility(View.VISIBLE);
-        Tab3.setVisibility(View.VISIBLE);
-        Tab4.setVisibility(View.VISIBLE);
-        Tab5.setVisibility(View.VISIBLE);
-*/
         DatabaseReference mDatabase = database.getReference("Tasks");
+        tmael1.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
 
-        // edit_task.setOnClickListener(new View.OnClickListener() {
-        //  @Override
-        //   public void onClick(View view) {
+                mDatabase.child("1").child("tmael").setValue(tmael1.getText().toString());
+
+
+
+                return false;
+            }
+        });
+        comment1.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("1").child("comment").setValue(comment1.getText().toString());
+
+
+                return false;
+            }
+        });
+        driver1.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("1").child("driver").setValue(driver1.getText().toString());
+
+
+                return false;
+            }
+        });
+
+
+
+
+
+        mDatabase.child("1").child("tmael").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                tmael1.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("1").child("driver").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                driver1.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        mDatabase.child("1").child("comment").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                comment1.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
         mDatabase.child("1").child("depart").addValueEventListener(new ValueEventListener() {
@@ -349,6 +425,86 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        tmael2.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("2").child("tmael").setValue(tmael2.getText().toString());
+
+
+
+                return false;
+            }
+        });
+        comment2.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("2").child("comment").setValue(comment2.getText().toString());
+
+
+                return false;
+            }
+        });
+        driver2.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("2").child("driver").setValue(driver2.getText().toString());
+
+
+                return false;
+            }
+        });
+
+
+
+
+
+        mDatabase.child("2").child("tmael").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                tmael2.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("2").child("driver").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                driver2.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        mDatabase.child("2").child("comment").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                comment2.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
         mDatabase.child("2").child("depart").addValueEventListener(new ValueEventListener() {
@@ -436,6 +592,86 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        tmael3.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("3").child("tmael").setValue(tmael3.getText().toString());
+
+
+
+                return false;
+            }
+        });
+        comment3.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("3").child("comment").setValue(comment3.getText().toString());
+
+
+                return false;
+            }
+        });
+        driver3.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("3").child("driver").setValue(driver3.getText().toString());
+
+
+                return false;
+            }
+        });
+
+
+
+
+
+        mDatabase.child("3").child("tmael").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                tmael3.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("3").child("driver").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                driver3.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        mDatabase.child("3").child("comment").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                comment3.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         mDatabase.child("3").child("depart").addValueEventListener(new ValueEventListener() {
 
@@ -522,6 +758,86 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        tmael4.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("4").child("tmael").setValue(tmael4.getText().toString());
+
+
+
+                return false;
+            }
+        });
+        comment4.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("4").child("comment").setValue(comment4.getText().toString());
+
+
+                return false;
+            }
+        });
+        driver4.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("4").child("driver").setValue(driver4.getText().toString());
+
+
+                return false;
+            }
+        });
+
+
+
+
+
+        mDatabase.child("4").child("tmael").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                tmael4.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("4").child("driver").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                driver4.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        mDatabase.child("4").child("comment").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                comment4.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         mDatabase.child("4").child("depart").addValueEventListener(new ValueEventListener() {
 
