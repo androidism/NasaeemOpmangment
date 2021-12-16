@@ -923,6 +923,85 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        tmael5.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("5").child("tmael").setValue(tmael5.getText().toString());
+
+
+
+                return false;
+            }
+        });
+        comment5.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("5").child("comment").setValue(comment5.getText().toString());
+
+
+                return false;
+            }
+        });
+        driver5.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                mDatabase.child("5").child("driver").setValue(driver5.getText().toString());
+
+
+                return false;
+            }
+        });
+
+
+
+
+
+        mDatabase.child("5").child("tmael").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                tmael5.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("5").child("driver").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                driver5.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        mDatabase.child("5").child("comment").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                comment5.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         mDatabase.child("5").child("depart").addValueEventListener(new ValueEventListener() {
 
 
