@@ -285,7 +285,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:background="@drawable/frame"
-                        android:ems="5"
+                        android:ems="7"
                         android:text="@string/Safety_Security"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -297,7 +297,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:background="@drawable/frame"
-                        android:ems="5"
+                        android:ems="7"
                         android:text="@string/Administration"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -435,17 +435,18 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch1"
+                        android:id="@+id/sm1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
                         android:text="@string/Abrov"
+
                         tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml"
                         android:textAlignment="center"
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch2"
+                        android:id="@+id/s1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -580,7 +581,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch1999"
+                        android:id="@+id/sm2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -590,7 +591,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch2999"
+                        android:id="@+id/s2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -725,7 +726,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch19999"
+                        android:id="@+id/sm3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -735,7 +736,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch299999"
+                        android:id="@+id/s3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -869,7 +870,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch9199"
+                        android:id="@+id/sm4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -879,7 +880,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch9299"
+                        android:id="@+id/s4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -1013,7 +1014,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch199"
+                        android:id="@+id/sm5"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"
@@ -1023,7 +1024,7 @@
                         android:textSize="18sp"/>
 
                     <Switch
-                        android:id="@+id/switch299"
+                        android:id="@+id/s5"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/frame"

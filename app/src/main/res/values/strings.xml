@@ -28,6 +28,7 @@
 
     <string name="edittask">إرسال المهمة</string>
     <string name="Abrov">الموافقة</string>
+    <string name="Abrovby">تمت الموافقة</string>
     <string-array name="Sections">اختر
         <item>WFP</item>
         <item>التعليم</item>

@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,12 +55,14 @@ TextView name1,point1,target1,team1,location1,Section1,
    EditText tmael1, tmael2, tmael3, tmael4, tmael5,
         driver1,driver2,driver3,driver4,driver5,
         comment1,comment2,comment3,comment4,comment5;
-TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
+
+    Switch s1,s2,s3,s4,s5,sm1,sm2,sm3,sm4,sm5;
+    TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
     Integer numTask;
 
 
 
-    Boolean isAllFABVisible,v;
+    Boolean isAllFABVisible,v,b1,bm1;
 
 
     @Override
@@ -79,6 +83,7 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
         isAllFABVisible=false;
 
         fab.shrink();
+
 
 
 
@@ -199,6 +204,16 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
         comment3= findViewById(R.id.comment3);
         comment4= findViewById(R.id.comment4);
         comment5= findViewById(R.id.comment5);
+        s1= findViewById(R.id.s1);
+        s2= findViewById(R.id.s2);
+        s3= findViewById(R.id.s3);
+        s4= findViewById(R.id.s4);
+        s5= findViewById(R.id.s5);
+        sm1= findViewById(R.id.sm1);
+        sm2= findViewById(R.id.sm2);
+        sm3= findViewById(R.id.sm3);
+        sm4= findViewById(R.id.sm4);
+        sm5= findViewById(R.id.sm5);
 
 
     }
@@ -260,6 +275,58 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
 
         DatabaseReference mDatabase = database.getReference("Tasks");
+        sm1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("1").child("safety_and_security_approval").setValue("true");
+                } else {
+                    mDatabase.child("1").child("safety_and_security_approval").setValue("false");
+                }
+            }
+        });
+        s1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("1").child("field_manager_approval").setValue("true");
+                } else {
+                    mDatabase.child("1").child("field_manager_approval").setValue("false");
+                }
+            }
+        });
+      mDatabase.child("1").child("safety_and_security_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sm1.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("1").child("field_manager_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                s1.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
         tmael1.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
@@ -425,6 +492,56 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        sm2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("2").child("safety_and_security_approval").setValue("true");
+                } else {
+                    mDatabase.child("2").child("safety_and_security_approval").setValue("false");
+                }
+            }
+        });
+        s2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("2").child("field_manager_approval").setValue("true");
+                } else {
+                    mDatabase.child("2").child("field_manager_approval").setValue("false");
+                }
+            }
+        });
+        mDatabase.child("2").child("safety_and_security_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sm2.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("2").child("field_manager_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                s2.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         tmael2.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
@@ -592,6 +709,56 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        sm3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("3").child("safety_and_security_approval").setValue("true");
+                } else {
+                    mDatabase.child("3").child("safety_and_security_approval").setValue("false");
+                }
+            }
+        });
+        s3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("3").child("field_manager_approval").setValue("true");
+                } else {
+                    mDatabase.child("3").child("field_manager_approval").setValue("false");
+                }
+            }
+        });
+        mDatabase.child("3").child("safety_and_security_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sm3.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("3").child("field_manager_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                s3.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         tmael3.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
@@ -758,6 +925,56 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        sm4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("4").child("safety_and_security_approval").setValue("true");
+                } else {
+                    mDatabase.child("4").child("safety_and_security_approval").setValue("false");
+                }
+            }
+        });
+        s4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("4").child("field_manager_approval").setValue("true");
+                } else {
+                    mDatabase.child("4").child("field_manager_approval").setValue("false");
+                }
+            }
+        });
+        mDatabase.child("4").child("safety_and_security_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sm4.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("4").child("field_manager_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                s4.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         tmael4.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
@@ -923,6 +1140,56 @@ TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
 
             }
         });
+        sm5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("5").child("safety_and_security_approval").setValue("true");
+                } else {
+                    mDatabase.child("5").child("safety_and_security_approval").setValue("false");
+                }
+            }
+        });
+        s5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    mDatabase.child("5").child("field_manager_approval").setValue("true");
+                } else {
+                    mDatabase.child("5").child("field_manager_approval").setValue("false");
+                }
+            }
+        });
+        mDatabase.child("5").child("safety_and_security_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sm5.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("5").child("field_manager_approval").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                s5.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         tmael5.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
