@@ -24,6 +24,8 @@
     <string name="num5">5</string>
     <string name="addtask">إضافة مهمة</string>
     <string name="target">الهدف</string>
+    <string name="date">التاريخ</string>
+
 
 
     <string name="edittask">إرسال المهمة</string>
