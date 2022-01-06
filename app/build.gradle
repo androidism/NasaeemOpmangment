@@ -34,7 +34,7 @@ android {
 dependencies {
     implementation 'com.jakewharton:butterknife:10.2.3'
     implementation 'androidx.annotation:annotation:1.3.0'
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-database:20.0.2'
     implementation 'com.google.firebase:firebase-firestore:24.0.0'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
@@ -48,8 +48,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
-    implementation platform('com.google.firebase:firebase-bom:29.0.1')
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
     implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
 
    // releaseImplementation "com.github.GrenderG:Toasty:$toastyVersion1"
   //  implementation files('com.github.GrenderG:Toasty:1.5.2')
