@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NasaeemOpmangment">
         <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
             android:name=".Add_Task"
-                android:exported="false" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="true" />

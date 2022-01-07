@@ -46,7 +46,10 @@ public class Add_Task extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+   //     startActivity(new Intent(activity_main2.this, IBinder.DeathRecipient.class));
+
         setContentView(R.layout.activity_add_task);
         getSupportActionBar().hide();
 
