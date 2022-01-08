@@ -1,8 +1,10 @@
 package org.ismail.nasaeemopmangment;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -17,6 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Calendar;
+
 public class Add_Task extends AppCompatActivity {
 
     FloatingActionButton fl_back;
@@ -26,6 +30,11 @@ public class Add_Task extends AppCompatActivity {
     Integer numTask;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference mDatabase = database.getReference();
+    DatePickerDialog picker;
+
+
+
+
     public void addChild(){
     mDatabase.child("Tasks").child(numTask.toString()).child("target").setValue(target.getText().toString());
     mDatabase.child("Tasks").child(numTask.toString()).child("name").setValue(name.getSelectedItem().toString());
@@ -48,9 +57,30 @@ public class Add_Task extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-   //     startActivity(new Intent(activity_main2.this, IBinder.DeathRecipient.class));
-
         setContentView(R.layout.activity_add_task);
+
+        date=findViewById(R.id.date);
+
+     date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar cldr = Calendar.getInstance();
+                int day = cldr.get(Calendar.DAY_OF_MONTH);
+                int month = cldr.get(Calendar.MONTH);
+                int year = cldr.get(Calendar.YEAR);
+                // date picker dialog
+                picker = new DatePickerDialog(Add_Task.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                date.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                            }
+                        }, year, month, day);
+                picker.show();
+            }
+        });
+
+
         getSupportActionBar().hide();
 
         fl_back = findViewById(R.id.fl_back);
@@ -76,7 +106,7 @@ public class Add_Task extends AppCompatActivity {
         location = findViewById(R.id.location);
         depart = findViewById(R.id.depart);
         point= findViewById(R.id.point);
-        date=findViewById(R.id.date);
+
 
 
 
