@@ -122,6 +122,7 @@ public class Add_Task extends AppCompatActivity {
                             break;
                         case 4:
                             addChild();
+                            break;
                         case 5:
                             addChild();
                             break;

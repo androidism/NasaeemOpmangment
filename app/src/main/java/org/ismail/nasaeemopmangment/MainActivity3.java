@@ -22,7 +22,7 @@ public class MainActivity3 extends AppCompatActivity {
                     }
                     //R.anim.nav_default_pop_exit_anim
                     startActivity(new Intent(MainActivity3.this, Add_Task.class));
-                   overridePendingTransition(0,R.anim.nav_default_pop_enter_anim);
+                   overridePendingTransition(0,R.anim.nav_default_pop_exit_anim);
 
 
                 } catch (InterruptedException e) {
