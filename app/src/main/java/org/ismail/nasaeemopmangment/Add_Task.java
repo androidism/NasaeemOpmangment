@@ -1,6 +1,7 @@
 package org.ismail.nasaeemopmangment;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -89,13 +90,13 @@ public class Add_Task extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                finish();
+              /*  finish();
                 finishAffinity();
-                System.exit(0);
-           //     Intent intent = new Intent(Add_Task.this, MainActivity2.class);
-             //   startActivity(intent);
+                System.exit(0);*/
+            Intent intent = new Intent(Add_Task.this, MainActivity2.class);
+              startActivity(intent);
 
-                //Toast.makeText(Add_Task.this, "شكراً لأنك ماضفت مهمة", Toast.LENGTH_SHORT).show();
+              Toast.makeText(Add_Task.this, "شكراً لأنك ماضفت مهمة", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -1043,6 +1044,8 @@ public class Add_Task extends AppCompatActivity {
                             addChild();
                             break;
                     }
+                    Intent intent = new Intent(Add_Task.this, MainActivity2.class);
+                    startActivity(intent);
                  Toast.makeText(Add_Task.this, "تم رفع المهمة بالتوفيق", Toast.LENGTH_SHORT).show();
 
                 }

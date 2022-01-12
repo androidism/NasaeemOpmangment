@@ -50,7 +50,8 @@ TextView name1,point1,target1,team1,location1,Section1,
     name2,point2,target2,team2,location2,Section2,
     name3,point3,target3,team3,location3,Section3,
     name4,point4,target4,team4,location4,Section4,
-    name5,point5,target5,team5,location5,Section5;
+    name5,point5,target5,team5,location5,Section5,
+    date1,date2,date3,date4,date5,date6;
 
    EditText tmael1, tmael2, tmael3, tmael4, tmael5,
         driver1,driver2,driver3,driver4,driver5,
@@ -129,8 +130,6 @@ TextView name1,point1,target1,team1,location1,Section1,
                         Intent intent = new Intent(MainActivity2.this, Add_Task.class);
                         startActivity(intent);
 
-
-
                         Toast.makeText(MainActivity2.this, "ضيف المهمة من بعد إذنك", Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -193,6 +192,12 @@ TextView name1,point1,target1,team1,location1,Section1,
         tmael4= findViewById(R.id.tmael4);
         tmael5= findViewById(R.id.tmael5);
 
+        date1= findViewById(R.id.date1);
+        date2= findViewById(R.id.date2);
+        date3= findViewById(R.id.date3);
+        date4= findViewById(R.id.date4);
+        date5= findViewById(R.id.date5);
+
         driver1= findViewById(R.id.driver1);
         driver2= findViewById(R.id.driver2);
         driver3= findViewById(R.id.driver3);
@@ -233,32 +238,47 @@ TextView name1,point1,target1,team1,location1,Section1,
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 numTask = dataSnapshot.getValue(Integer.class);
-                if (numTask == 2){
+/*
+               for(int i=0;i<numTask;i++)
+               {
+
+               }
+
+                /*
+                if (numTask > 2){
                     Tab1.setVisibility(View.VISIBLE);}
-                if (numTask == 3) {
+                if (numTask > 3) {
                     Tab1.setVisibility(View.VISIBLE);
                     Tab2.setVisibility(View.VISIBLE);
                 }
-                if (numTask == 4) {
+                if (numTask > 4) {
                     Tab1.setVisibility(View.VISIBLE);
                     Tab2.setVisibility(View.VISIBLE);
                     Tab3.setVisibility(View.VISIBLE);
                 }
-                if (numTask == 5) {
+                if (numTask > 5) {
                     Tab1.setVisibility(View.VISIBLE);
                     Tab2.setVisibility(View.VISIBLE);
                     Tab3.setVisibility(View.VISIBLE);
                     Tab4.setVisibility(View.VISIBLE);
                 }
-                if (numTask == 6) {
+                if (numTask > 6) {
                     Tab1.setVisibility(View.VISIBLE);
                     Tab2.setVisibility(View.VISIBLE);
                     Tab3.setVisibility(View.VISIBLE);
                     Tab4.setVisibility(View.VISIBLE);
                     Tab5.setVisibility(View.VISIBLE);
                 }
+                    if (numTask > 7) {
+                        Tab1.setVisibility(View.VISIBLE);
+                        Tab2.setVisibility(View.VISIBLE);
+                        Tab3.setVisibility(View.VISIBLE);
+                        Tab4.setVisibility(View.VISIBLE);
+                        Tab5.setVisibility(View.VISIBLE);
+                        Tab6.setVisibility(View.VISIBLE);
+                }
 
-
+*/
 
             }
 
@@ -406,7 +426,20 @@ TextView name1,point1,target1,team1,location1,Section1,
 
             }
         });
+        mDatabase.child("1").child("date").addValueEventListener(new ValueEventListener() {
 
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                date1.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         mDatabase.child("1").child("depart").addValueEventListener(new ValueEventListener() {
 
@@ -613,6 +646,20 @@ TextView name1,point1,target1,team1,location1,Section1,
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 comment2.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("2").child("date").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                date2.setText(dataSnapshot.getValue(String.class));
 
             }
 
@@ -839,6 +886,20 @@ TextView name1,point1,target1,team1,location1,Section1,
             }
         });
 
+        mDatabase.child("3").child("date").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                date3.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         mDatabase.child("3").child("depart").addValueEventListener(new ValueEventListener() {
 
@@ -1055,6 +1116,21 @@ TextView name1,point1,target1,team1,location1,Section1,
             }
         });
 
+        mDatabase.child("4").child("date").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                date4.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         mDatabase.child("4").child("depart").addValueEventListener(new ValueEventListener() {
 
@@ -1261,6 +1337,20 @@ TextView name1,point1,target1,team1,location1,Section1,
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 comment5.setText(dataSnapshot.getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mDatabase.child("5").child("date").addValueEventListener(new ValueEventListener() {
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                date5.setText(dataSnapshot.getValue(String.class));
 
             }
 

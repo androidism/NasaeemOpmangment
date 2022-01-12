@@ -12,7 +12,7 @@
     <string name="Staff">فريق العمل</string>
     <string name="point">نقطة الانطلاق</string>
     <string name="Location">الموقع</string>
-    <string name="monitoring_team">فريق المراقبة</string>
+    <string name="monitoring_team">فريق الدعم</string>
     <string name="drivers_name">اسم السائق</string>
     <string name="Safety_Security">الأمن والسلامة</string>
     <string name="Administration">الإدارة</string>
@@ -21,7 +21,26 @@
     <string name="num2">2</string>
     <string name="num3">3</string>
     <string name="num4">4</string>
+
     <string name="num5">5</string>
+    <string name="num6">6</string>
+    <string name="num7">7</string>
+    <string name="num8">8</string>
+    <string name="num9">9</string>
+    <string name="num10">10</string>
+    <string name="num11">11</string>
+    <string name="num12">12</string>
+    <string name="num13">13</string>
+    <string name="num14">14</string>
+    <string name="num15">15</string>
+    <string name="num16">16</string>
+    <string name="num17">17</string>
+    <string name="num18">18</string>
+    <string name="num19">19</string>
+    <string name="num20">20</string>
+    <string name="num21">21</string>
+
+
     <string name="addtask">إضافة مهمة</string>
     <string name="target">الهدف</string>
     <string name="date">التاريخ</string>

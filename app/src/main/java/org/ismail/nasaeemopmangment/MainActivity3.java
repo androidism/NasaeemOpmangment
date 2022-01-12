@@ -20,8 +20,7 @@ public class MainActivity3 extends AppCompatActivity {
                         sleep(10);
                         delay = delay + 100;
                     }
-                    //R.anim.nav_default_pop_exit_anim
-                    startActivity(new Intent(MainActivity3.this, Add_Task.class));
+                    startActivity(new Intent(MainActivity3.this, MainActivity2.class));
                    overridePendingTransition(0,R.anim.nav_default_pop_exit_anim);
 
 
