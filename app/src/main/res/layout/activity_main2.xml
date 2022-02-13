@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:viewBindingIgnore="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
@@ -2607,7 +2608,761 @@
 
                 </TableRow>
 
+                <TableRow
+                    android:id="@+id/Tab16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl"
+                    android:visibility="visible"
 
+                    >
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="16"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/Section16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/name16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/target16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/point16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/team16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/location16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/tmael16"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/driver16"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/sm16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/s16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/comment16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/Tab17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textV55iew7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="17"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/Section17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/name17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/target17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/point17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/team17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/location17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/tmael17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                    <EditText
+                        android:id="@+id/driver17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/sm17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/s17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/comment17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/Tab18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView9999888"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="18"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/Section18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/name18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/target18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/point18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/team18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/location18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+
+                    <EditText
+                        android:id="@+id/tmael18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/driver18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/sm18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/s18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/comment18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/Tab19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView99959998"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="19"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/Section19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/name19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/target19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/point19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/team19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/location19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/tmael19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/driver19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/sm19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/s19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/comment19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/Tab20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textDirection="firstStrongRtl"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView99229"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="20"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/Section20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/name20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/target20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/point20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/team20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/location20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/frame"
+                        android:textAlignment="center"
+                        android:textColor="#0C0C0C"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/tmael20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/driver20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Switch
+                        android:id="@+id/sm20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/s20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:text="@string/Abrov"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                    <EditText
+                        android:id="@+id/comment20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </TableRow>
 
 
             </TableLayout>
