@@ -48,8 +48,6 @@ TextView name1,point1,target1,team1,location1,Section1,
     TableRow Tab1,Tab2,Tab3,Tab4,Tab5,Tab6,Tab7,Tab8,Tab9,Tab10;
     Integer numTask;
    Boolean isAllFABVisible,v,b1,bm1;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -3816,6 +3814,240 @@ TextView name1,point1,target1,team1,location1,Section1,
 
 
         DatabaseReference mDatabase = database.getReference("Tasks");
+     /*   public void createChild(String name) {
+            sm1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if (b) {
+                        mDatabase.child("1").child("safety_and_security_approval").setValue("true");
+                    } else {
+                        mDatabase.child("1").child("safety_and_security_approval").setValue("false");
+                    }
+                }
+            });
+            s1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if (b) {
+                        mDatabase.child("1").child("field_manager_approval").setValue("true");
+                    } else {
+                        mDatabase.child("1").child("field_manager_approval").setValue("false");
+                    }
+                }
+            });
+            mDatabase.child("1").child("safety_and_security_approval").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    sm1.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("field_manager_approval").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    s1.setChecked(Boolean.parseBoolean(dataSnapshot.getValue(String.class)));
+
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+
+
+            tmael1.setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                    mDatabase.child("1").child("tmael").setValue(tmael1.getText().toString());
+
+
+
+                    return false;
+                }
+            });
+            comment1.setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                    mDatabase.child("1").child("comment").setValue(comment1.getText().toString());
+
+
+                    return false;
+                }
+            });
+            driver1.setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+                    mDatabase.child("1").child("driver").setValue(driver1.getText().toString());
+
+
+                    return false;
+                }
+            });
+
+
+
+
+
+            mDatabase.child("1").child("tmael").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    tmael1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("driver").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    driver1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+            mDatabase.child("1").child("comment").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    comment1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("date").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    date1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+            mDatabase.child("1").child("depart").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    Section1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("point").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    point1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("location").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    location1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("name").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    name1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("target").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    target1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            mDatabase.child("1").child("team").addValueEventListener(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    team1.setText(dataSnapshot.getValue(String.class));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+        }
+*/
         sm1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -4046,6 +4278,8 @@ TextView name1,point1,target1,team1,location1,Section1,
 
             }
         });
+
+
         sm2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -37433,6 +37667,7 @@ TextView name1,point1,target1,team1,location1,Section1,
 
             }
         });
+        /*
         sm150.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -49014,7 +49249,7 @@ TextView name1,point1,target1,team1,location1,Section1,
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        });/*
         sm201.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -71717,7 +71952,7 @@ TextView name1,point1,target1,team1,location1,Section1,
 
             }
         });
-
+*/
 
         edit_task.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71730,6 +71965,9 @@ TextView name1,point1,target1,team1,location1,Section1,
             }
         });
     }
+
+
+
     public boolean isConnected() {
         boolean connected = false;
         try {
