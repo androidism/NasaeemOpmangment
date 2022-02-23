@@ -17,7 +17,7 @@ public class MainActivity3 extends AppCompatActivity {
                 try {
                     int delay = 0;
                     while (delay < 2000) {
-                        sleep(10);
+                        sleep(7);
                         delay = delay + 100;
                     }
                     startActivity(new Intent(MainActivity3.this, MainActivity2.class));
