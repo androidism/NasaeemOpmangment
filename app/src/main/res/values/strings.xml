@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">إدارة المهمات</string>
+    <string name="app_name" translatable="false">إدارة المهمات شامل</string>
     <string name="usertxtname">UserName</string>
     <string name="passtxtname">Password</string>
     <string name="logtxtname">Login</string>
@@ -21,7 +21,6 @@
     <string name="num2">2</string>
     <string name="num3">3</string>
     <string name="num4">4</string>
-
     <string name="num5">5</string>
     <string name="num6">6</string>
     <string name="num7">7</string>
@@ -39,18 +38,15 @@
     <string name="num19">19</string>
     <string name="num20">20</string>
     <string name="num21">21</string>
-
-
     <string name="addtask">إضافة مهمة</string>
     <string name="target">الهدف</string>
     <string name="date">التاريخ</string>
-
-
     <string name="edittask">إرسال المهمة</string>
     <string name="Abrov">الموافقة</string>
     <string name="Abrovby">تمت الموافقة</string>
     <string-array name="Sections">اختر
         <item>WFP</item>
+        <item>Agriculture</item>
         <item>التعليم</item>
         <item>الحماية</item>
         <item>المراقبة</item>
@@ -63,13 +59,16 @@
         <item>الإعلامي</item>
         <item>المعلومات</item>
         <item>الإدارة</item>
-
     </string-array>
     <string-array name="nameall">اختر
         <item>إياد خالد</item>
         <item>وليد شيخ يوسف</item>
+        <item>سامر هويش</item>
+        <item>سامر هويش</item>
         <item>محمد الحسن</item>
         <item>عبد الله الخشن</item>
+        <item>أسامة اليماني</item>
+        <item>إياس عبد العال</item>
         <item>أكرم الخشن</item>
         <item>عبد الحميد السليم</item>
         <item>سامر معتوق</item>
@@ -82,12 +81,10 @@
         <item>أحمد الخالد</item>
         <item>تميم احمدو</item>
         <item>رشا زيتون</item>
-
     </string-array>
     <string-array name="point">اختر
         <item>من المكتب</item>
         <item>مباشر</item>
-
     </string-array>
     <string name="title_activity_add_task">Add_Task</string>
     <!-- Strings used for fragments for navigation -->
